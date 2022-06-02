@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { ReactElement } from 'react';
+import { AppButton } from './components/AppButton';
+import { Grid } from './components/Grid';
+import { useAnimals } from './hooks/useAnimals';
 
-function App() {
+function App(): ReactElement {
+  const [caughtAnimals, setCaughtAnimals, catchNewAnimal] = useAnimals();
+
+  const handleClick = () => {
+    catchNewAnimal();
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '3rem',
+      }}
+    >
+      <AppButton onClick={handleClick} title={'Catch'} />
+
+      <Grid animals={caughtAnimals} setAnimals={setCaughtAnimals} />
     </div>
   );
 }

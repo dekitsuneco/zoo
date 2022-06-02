@@ -1,0 +1,27 @@
+.animal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4.7rem;
+
+  border-radius: 1rem;
+  border: 3px solid black;
+}
+
+.animal__type {
+  display: block;
+  margin: 0 0 1rem;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.animal__trait {
+  display: block;
+  margin: 0;
+
+  font-size: 1.1rem;
+  font-weight: bold;
+}

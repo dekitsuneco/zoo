@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 2rem;
+}
+
+.wrapper__btn {
+  display: inline-block;
+  width: 10rem;
+
+  margin-right: 0.6rem;
+
+  background: #339dff;
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 2rem;
+  border-radius: 3rem;
+  transition: all 0.3s;
+}
+
+.wrapper__btn:hover {
+  background: #fff;
+  color: #339dff;
+}
